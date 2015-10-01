@@ -58,8 +58,10 @@ in a file ending in ".i"; for example, prog0.i.
 
 To distinguish between multiple declarations of the same name, uncomment
 the line
+```java
 
 //	public String toString() {return "" + op.toString() + offset;}
+```
 
 in class Id in package inter.  The intermediate code will then print the
 offset as a suffix to an identifier.
