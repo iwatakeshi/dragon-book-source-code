@@ -1,6 +1,6 @@
-Taken from the Dragon Book
+# Taken from the Dragon Book
 
-The Language
+## The Language
 
 The language is based on the fragments in Chapter 6: expressions, arrays,
 boolean expressions, statements, declarations, blocks:
@@ -17,21 +17,21 @@ E  ->  E + E | E - E | E * E | E / E | L | ( B ) | num
 L  ->  L [ B ] | id
 
 
-Package lexer
+## Package lexer
 
 class Tag. Tags distinguish tokens.
 class Token with subclasses Num, Real, and Word
 class Lexer, with procedure scan
 
 
-Package symbols
+## Package symbols
 
 class Type.  Put types here.
 class Id.  Could have put Id's with expressions; in fact Id extends Expr
 clas Env.  Linked symbol tables.
 
 
-Package inter for intermediate code
+## Package inter for intermediate code
 
 For simplicity, the front end builds syntax trees.  Three-address code is
 emitted during a subsequent pass.  We generate short-circuit code for
@@ -42,14 +42,14 @@ rather than emitting strings.  Further, Chapter 9 has examples with code
 that might be produced by backpatching -- that's a variant to be explored
 separately.
 
-Package parser
+## Package parser
 
 At one point, I had the parser and lexer in one package, called syntax.
 The parser is kept separate for readability.  We can present the lexer
 early -- the parser "touches" the other packages, so it's best presented
 later.
 
-Directories tests and tmp
+## Directories tests and tmp
 
 The makefile automatically runs a compiled front end on tests, presumed
 to be in files ending in ".t"; for example, prog0.t is the quicksort
